@@ -2,13 +2,13 @@
 Denna guide innehåller några enkla förklaringar vad versionshantering är och tips och tricks hur man kan tänka när man versionshanterar sin kod. Den kommer inte att ta upp funktionalitet hos olika typer av versionshanteringssätt. För djupare information om hur du använder olika modeller av versionshantering bör du rådfråga den officiella dokumentationen för det systemet. Informationen här är baserad på egen erfarenhet och även till viss del forskning i ämnet.
 
 ##Innehållsförteckning
-* [Vad är versionshantering?](#vad-ar-versionshantering)
+* [Vad är versionshantering?](#vad-är-versionshantering)
 * [Olita typer av versionshantering?](#olika-typer-av-versionshantering)
 	* [Decentraliserat](#decentraliserad-versionshantering)
 	* [Centraliserat](#centraliserad-versionshantering)
 * [Varför versionshantera?](#varför-versionshantera)
-* [Vilka andra kan vara intressrade av min versionshantering?](#vilka-andra-ar-intresserade-av-min-versionshantering)
-* [När ska jag versionshantera?](#nar-ska-jag-versionshantera)
+* [Vilka andra kan vara intressrade av min versionshantering?](#vilka-andra-är-intresserade-av-min-versionshantering)
+* [När ska jag versionshantera?](#när-ska-jag-versionshantera)
 * [Skrivet av](#skrivet-av)
 
 ##Vad är versionshantering
