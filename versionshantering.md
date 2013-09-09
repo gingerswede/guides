@@ -1,5 +1,5 @@
 #Versionhantering
-Denna guide innehåller några enkla förklaringar vad versionshantering är och tips och tricks hur man kan tänka när man versionshanterar sin kod. Den kommer inte att ta upp funktionalitet hos olika typer av versionshanteringssätt. För djupare information om hur du använder olika modeller av versionshantering bör du rådfråga den officiella dokumentationen för det systemet. Informationen här är baserad på egen erfarenhet och även till viss del forskning i ämnet. **OBS!** Detta är ej att se som en vetenskaplig källa.
+Denna guide innehåller några enkla förklaringar vad versionshantering är och tips och tricks hur man kan tänka när man versionshanterar sin kod. Den kommer inte att ta upp funktionalitet hos olika typer av versionshanteringssätt. För djupare information om hur du använder olika modeller av versionshantering bör du rådfråga den officiella dokumentationen för det systemet. Informationen här är baserad på egen erfarenhet och även till viss del forskning i ämnet.
 
 ##Innehållsförteckning
 * [Vad är versionshantering?](#vad-ar-versionshantering)
