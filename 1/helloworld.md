@@ -83,6 +83,8 @@ För att börja upprätta denna arkitektur så skapar vi nu tre mappar i rooten 
 
 Vi börjar med att skapa modellen för våran applikation. Så då öppnar vi filen "helloworldmodel.php". Vi kommer i denna fil nu både ha en klass med ett namespace och den funktionalitet som avgör vad för något som applikationen ska kunna göra som vi inte vill att användaren direkt ska kunna påverka. Så i filen skriver vi denna källkod:
 
+> Jag tycker den här klassen skulle heta Message - Daniel
+
 	<?php
 	
 	namespace HelloWorld\Model;
