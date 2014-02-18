@@ -1,8 +1,9 @@
 #Introduktion till PHP på Svenska
-Om du läser detta så är det troligtvis för att du vill lära dig programmeringsspråket PHP. Då kan första frågan som du vill ha svar på "vad förväntar denna bok att jag kan?". De förkunskaper som du förväntas att ha för att förstå denna bok är grundläggande kunskap om objektorienterad programmering. Du förväntas även kunna html och css. Denna bok kommer inte att gå in på sådant som vad en _if-sats_ är eller vad ett objekt är. Det som vi kommer att ta upp i denna boken är hur php fungerar objektorienterat, och då tillsammans med mjukvaruarkitekturen Model-View-Controller (__MVC__).
+Denna bok uppkom då det saknades kurslitteratur på rätt nivå för kursen "Webbutveckling med PHP" som ges vid Linnéuniversitetet. De böcker som finns på marknaden har antingen legat på för låg nivå där läsaren inte förväntats kunna programmera sedan tidigare. Eller så har de legat på en för hög nivå där läsaren förväntas att redan kunna PHP flytande. Då studenterna vid den kursen redan kan programmera andra objektorienterade programmeringsspråk, men inte garanterat är bekanta med PHP så skrev som komplement små texter för att förklara vissa delar. Dessa kompletterades sedan och sammanfogades för att i slutändan bli denna bok.
 
-##Kort om PHP
-Php är ett så kallat script språk som används för att skapa serversideapplikation för webben. Det är ett av de vanligast förekommande språken för just detta. Detta beror på att det är väldigt enkelt och billigt att göra en applikation skriven med PHP publik. Oftast görs detta via en såkallad LAMP-server, LAMP står för __L__inux, __A__pache, __P__HP, __M__ySQL.
+De förkunskaper som du förväntas att ha för att förstå denna bok är grundläggande kunskap om objektorienterad programmering. Du förväntas även kunna html och css. Denna bok kommer inte att gå in på sådant som vad en _if-sats_ är eller vad ett objekt är. Det som vi kommer att ta upp i denna boken är hur php fungerar objektorienterat, och då tillsammans med mjukvaruarkitekturen Model-View-Controller (__MVC__).
+
+Målet med denna bok är att ge studenter tillgång till information som krävs för att lära sig använda PHP för att skapa webbapplikationer.
 
 ##Bokens uppbyggnad
 Boken bygger på att gradvis introducera nya utmaningar för dig i PHP. I bokens första del kommer fokus att ligga på PHP, hur vi kan använda PHP för att skapa enklare applikationer och kortare förklaringar av grunderna i PHP (men inte i programmering).
@@ -13,8 +14,15 @@ Bokens tredje del kan ses som ett uppslagsverk där vissa kringfunktioner och ge
 
 Om du känner att någon del av boken är otydlig gällande PHP funktionaliteter eller liknande så rekommenderas den officiella dokumentationen av PHP som finns på [http://www.php.net](http://www.php.net). Där finns det både exempel och förklaringar av olika delar av PHP. Den sidan är ett måste att lära sig att hitta på och det rekommenderas starkt att använda den sidan för förklaringar av grundfunktionaliteter i PHP.
 
+För att få ut så mycket som möjligt av boken så rekommenderas du att följa exemplen och även lösa de eventuella uppgifter som finns i boken. Lösningsförslag till uppgifterna går att hitta på bokens hemsida.
+
+##Bokens exempel
+Alla exempel i boken är skrivna av författarna. De går att hitta i sin helhet i bokens repositorium med kommentarer och dylikt. Exempel kommer att ligga i en katalogstruktur som består av kapitelnummer, sedan exempel, efter det följer exempelnummer (ex. ..._/1/exempel/4/_). Samtliga exempel finns även på bokens hemsida.
+
+Vissa exempel kommer att bestå av flera filer. Ha därför i åtanke att alla filer behövs om du väljer att ladda ner ett exempel för att testköra det lokalt.
+
 ##Vad du behöver för att följa boken
-Vad behöver då du för att kunna följa exempel ur denna bok och kunna skapa egna PHP-skript för att pröva dig fram?
+Vad behöver då du för att kunna följa exempel ur denna bok och kunna skapa egna PHP-skript för att pröva dig fram? Du kommer att behöva ha detta när du börjar läsa kapitel ett.
 
 ###Utvecklingsmiljö
 Du kommer att behöva en utvecklingsmiljö att skriva din kod i. Det går utmärkt att använda en vanlig texteditor som Notepad (Windows) eller Nano (*nix/Unix). Men det rekommenderas att använda en lite tyngre integrerad utvecklingsmiljö (__IDE__) så som Aptana eller Sublime. Vilken utvecklingsmiljö du väljer är upp till dig och beror på vilken av alla de som finns där ute som passar dig bäst. Eventuella bilder i boken kommer ifrån Aptana, Sublime och Notepad++. Det kommer inte garanterat att redogöras vilken av dessa som använts.
