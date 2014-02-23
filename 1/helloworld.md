@@ -81,6 +81,7 @@ För att börja upprätta denna arkitektur så skapar vi nu tre mappar i rooten 
 
 ![Katalogstruktur för projektet med de filerna som bör finnas.](img/helloworldmvcfolderstructure.png)
 
+###Modellen
 Vi börjar med att skapa modellen för våran applikation. Så då öppnar vi filen "helloworldmodel.php". Vi kommer i denna fil nu både ha en klass med ett namespace och den funktionalitet som avgör vad för något som applikationen ska kunna göra som vi inte vill att användaren direkt ska kunna påverka. Så i filen skriver vi denna källkod:
 
 > Jag tycker den här klassen skulle heta Message - Daniel
@@ -98,3 +99,47 @@ Vi börjar med att skapa modellen för våran applikation. Så då öppnar vi fi
 	}
 
 Som du säkert noterat så är namespace definerat som `HelloWorld\Model` och inte `HelloWorld.Model` som i exempelvis Java eller C#. Det är något som helt enkelt är definerat som standard i PHP att använda backslash (__\\__) istället för punkt (**.**) i namespace definitionen. Något annat som du noterat är att det står m_ framför den privata medlemsvariabeln message. Detta är något som kallas för hungarian notation där m_ helt enkelt visar att detta är en medlemsvariabel. Det är något som kommer att användas konsekvent i denna bok för att visa saker så som medlemsvariabler. I övrigt borde inte denna klass innehålla något som är nytt för dig som läsare. Det är en klass med en privat medlemsvariabel som innehåller strängen "Hello World". Vi har sedan funktionen `getMessage` som returnerar det värde som finns i medlemsvariabeln `$m_message`.
+
+Som du säkert noterat så har jag inte angivit något returvärde i metodsignaturen för funktionen `getMessage()`. Det behövs inte då PHP är otypat och det går därför att returnera ifrån funktioner när man själv känner att det är lämpligt. Detta är en av sakerna som gör det än viktigare att ha en strukturerad arkitektur för dina applikationer.
+
+###Vyn
+När vi har modellen klar så kommer vi nu att börja arbeta på våran vy. Det är där vi presenterar all information vi  vill att användaren ska se. Det är även här som all information som användaren kan påverka hanteras (exempelvis cookies och postparametrar). Men det är även här som all html och liknande saker byggs ihop för att visa användaren något. Det första vi kan fundera på nu är vad vi behöver i våran vy. En av de sakerna som vi har i modellen är ju funktionen `getMessage()`. Så vi kommer vilja hantera detta på något vis. Så i våran vy kommer vi alltså att behöva ha en variabel för detta. Vi kommer även att behöva skapa html på något vis som liknar det som vi hade i början av kapitlet. Ett exempel kan vara att göra koden som nedan:
+
+	<?php
+	namespace HelloWorld\View;
+	
+	class HelloWorldView {
+		private $m_message;
+		
+		public function getMessage() {
+			return $this->m_message;
+		}
+		
+		public function setMessage(String $message) {
+			$this->m_message = $message;
+		}
+		
+		public function generateHTML() {
+			$html = "
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>Hello World example</title>
+				</head>
+				<body>
+					$this->m_message
+				</body>
+			</html>
+			";
+			
+			return $html;
+		}
+	}
+
+Vi går igenom detta kodstycke uppifrån och ner. Först så talar jag om att det är PHP som vi skriver. Därefter berättar jag vilket namespace som vi ska jobba i just nu. Sedan talar jag om att vi ska jobba i en klass med namnet HelloWorldView. Efter det så skapar jag den privata medlemsvariabeln `$m_message`. Än så länge inget nytt i detta skript. Efter det så har jag skapat två funktioner som kallas för "getter" och "setter". Det är två funktioner vars enda syfte är att ge tillgång till den privata medlemsvariabeln `$m_message`. Anledningen till detta är för att vi här kan lägga till olika kontroller och formateringar som vi önskar. Vi har även kapslat in den privata medlemsvariabeln så att inga klasser utanför denna kan komma åt den och ändra i den hur som helst.
+
+Därefter så har vi funktionen `generateHTML()`. I denna funktion så skapas en textsträng som är den HTML som behövs för att skapa ett html-dokument som valideras enligt standarden för html 5. I denna textsträng så finns även `$this->m_message` inskjutet direkt i strängen. Det är fullt tillåtet när du skapar strängar med hjälp av dubbelcitation (__"__), det fungerar dock inte när man skapar det med hjälp av enkelcitation (**'**). 
+
+###Controllern
+Nu när vi har en vy och en modell färdiga så behöver vi något som kan transportera ett meddelande ifrån modellen till vyn. Det gör vi med hjälp av en controller. 
+
